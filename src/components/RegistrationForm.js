@@ -10,12 +10,15 @@ const initialState = {
     passoutYear: '',
     mobileNumber: '',
     currentCompany: '',
+    linkedinUrl: '',
     nameTouched: false,
     emailTouched: false,
     passoutYearTouched: false,
     mobileNumberTouched: false,
     currentCompanyTouched: false,
+    linkedinUrlTouched: false
 };
+
 
 const formReducer = (state, action) => {
     switch (action.type) {
@@ -36,11 +39,12 @@ const RegistrationForm = () => {
     const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
     const isMobileNumberValid = /^\d{10}$/.test(formData.mobileNumber);
     const isCurrentCompanyValid = formData.currentCompany.trim() !== '';
-
-    const isFormValid = isNameValid && isEmailValid && isMobileNumberValid && isCurrentCompanyValid;
-
+    const isLinkedinUrlValid = formData.linkedinUrl.trim() !== '';
 
 
+    const isFormValid = isNameValid && isEmailValid && isMobileNumberValid && isLinkedinUrlValid && isCurrentCompanyValid;
+
+    
     const handleChange = (e) => {
         const { name, value } = e.target;
         dispatch({ type: 'CHANGE', name, value });
@@ -110,6 +114,17 @@ const RegistrationForm = () => {
                             valid={isMobileNumberValid}
                             onChange={handleChange}
                         />
+
+                        <FieldInput
+                            label="LinkedIn Profile URL"
+                            name="linkedinUrl"
+                            type="text"
+                            value={formData.linkedinUrl}
+                            touched={formData.linkedinUrlTouched}
+                            valid={isLinkedinUrlValid}
+                            onChange={handleChange}
+                        />
+
 
                         <FieldInput
                             label="Current Company"
