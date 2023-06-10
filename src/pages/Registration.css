@@ -1,0 +1,65 @@
+.RegistrationHeader{
+    background-color: #F4F5FB;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem 10rem;
+}
+.logo > img{
+    width: 6.5rem;
+}
+.dept-name{
+    color: white;
+}
+.main-text{
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+}
+.sub-text{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: black;
+}
+
+
+.RegistrationNavbar{
+    height: 8rem;
+    background-color: #2D3748;
+    padding: 1.2rem 10rem;
+    display: flex;
+    align-items: center;
+}
+.RegistrationNavbar > p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+}
+
+
+
+
+
+.RegistrationForm{
+    background-color: #F4F5FB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+
+
+.RegistrationFooter {
+   background-color: #2D3748;
+   padding: 4rem 8rem 3rem 8rem;
+   text-align: left;
+
+}
+.RegistrationFooter > p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color:#ffffff80;
+    padding: 1rem;
+}
